@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<!-- 片段的标题，会显示在代码片段管理器和 IntelliSense 中 -->
+			<Title>Qt Forward Iterator</Title>
+			<!-- 快捷键！在代码里输入这个缩写，按两下Tab就能召唤片段 -->
+			<Shortcut>hfitor</Shortcut>
+			<!-- 片段的简要描述 -->
+			<Description>一段简单的迭代器遍历</Description>
+			<!-- 作者信息，可选 -->
+			<Author>hf</Author>
+			<!-- 片段类型：Expansion 是插入片段， SurroundsWith 是包裹选中代码的外侧代码片段 -->
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>map</ID>
+					<ToolTip>容器</ToolTip>
+					<Default>QMap</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[// 2.STL类型的迭代
+				auto itor = $map$.begin();
+				while(itor != $map$.end()){
+					itor++;
+				}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

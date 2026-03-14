@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<!-- 片段的标题，会显示在代码片段管理器和 IntelliSense 中 -->
+			<Title>Header Comment</Title>
+			<!-- 快捷键！在代码里输入这个缩写，按两下Tab就能召唤片段 -->
+			<Shortcut>hfheader</Shortcut>
+			<!-- 片段的简要描述 -->
+			<Description>创建文件注释头</Description>
+			<!-- 作者信息，可选 -->
+			<Author>hf</Author>
+			<!-- 片段类型：Expansion 是插入片段， SurroundsWith 是包裹选中代码的外侧代码片段 -->
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>FileName</ID>
+					<!-- 文件名占位符 -->
+					<Default>YourFileName</Default>
+					<ToolTip>输入当前文件名</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>date</ID>
+					<!-- 日期占位符 -->
+					<Default>2026-02-28</Default>
+					<ToolTip>输入当前日期</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>author</ID>
+					<!-- 作者占位符 -->
+					<Default>hf</Default>
+					<ToolTip>输入作者名</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[
+/*******************************************************************************
+ * @author $author$
+ * @date   $date$
+ * @file   $FileName$
+ * @brief  描述$selected$$end$
+///----------------------------------------------------------------------------
+///                           Change History
+///----------------------------------------------------------------------------
+///
+///****************************************************************************/
+				]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

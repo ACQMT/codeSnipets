@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<!-- 片段的标题，会显示在代码片段管理器和 IntelliSense 中 -->
+			<Title>private class with Qt ui</Title>
+			<!-- 快捷键！在代码里输入这个缩写，按两下Tab就能召唤片段 -->
+			<Shortcut>hfui</Shortcut>
+			<!-- 片段的简要描述 -->
+			<Description>创建私有类</Description>
+			<!-- 作者信息，可选 -->
+			<Author>hf</Author>
+			<!-- 片段类型：Expansion 是插入片段， SurroundsWith 是包裹选中代码的外侧代码片段 -->
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>类名</ToolTip>
+					<Default>QtClass</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[class $name$Private
+				{
+				public:
+					$name$Private($name$* q);
+					~$name$Private();
+					Ui::$name$Class* ui;
+				private:
+					$name$* q_ptr;
+					$selected$$end$
+				};
+
+				$name$Private::$name$Private($name$* q)
+					: q_ptr(q)
+					, ui(new Ui::$name$Class())
+				{
+					ui->setupUi(q);
+				}
+
+				$name$Private::~$name$Private()
+				{
+					delete ui;
+				}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
