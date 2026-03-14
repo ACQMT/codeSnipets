@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<!-- 片段的标题，会显示在代码片段管理器和 IntelliSense 中 -->
+			<Title>qt dynamic cast</Title>
+			<!-- 快捷键！在代码里输入这个缩写，按两下Tab就能召唤片段 -->
+			<Shortcut>qca</Shortcut>
+			<!-- 片段的简要描述 -->
+			<Description>Qt动态类转换</Description>
+			<!-- 作者信息，可选 -->
+			<Author>hf</Author>
+			<!-- 片段类型：Expansion 是插入片段， SurroundsWith 是包裹选中代码的外侧代码片段 -->
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>对象名</ToolTip>
+					<Default>Class</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+				<![CDATA[qobject_cast<T>($name$)]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
